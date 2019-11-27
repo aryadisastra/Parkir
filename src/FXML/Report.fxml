@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="754.0" prefWidth="1052.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ReportController">
+    <stylesheets>
+        <URL value="@report.css" />
+      <URL value="@../Style/report.css" />
+    </stylesheets>
+   <children>
+      <MenuBar layoutY="8.0" prefHeight="33.0" prefWidth="1101.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Petugas">
+               <items>
+                  <MenuItem fx:id="tambahptgs" mnemonicParsing="false" onAction="#kliktmbh" text="Tambah" />
+                  <MenuItem fx:id="ubhptgs" mnemonicParsing="false" onAction="#klikubah" text="Ubah" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Data">
+               <items>
+                  <MenuItem fx:id="editdata" mnemonicParsing="false" onAction="#klikedit" text="Edit" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Laporan">
+               <items>
+                  <MenuItem fx:id="cetak" mnemonicParsing="false" onAction="#klikcetak" text="Lihat danCetak Laporan" />
+               </items>
+            </Menu>
+            <Menu fx:id="keluar" mnemonicParsing="false" text="Keluar">
+               <items>
+                  <MenuItem fx:id="exit" mnemonicParsing="false" onAction="#klikkluar" text="Keluar Aplikasi" />
+                  <MenuItem fx:id="logout" mnemonicParsing="false" onAction="#kliklogout" text="Logout" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Label layoutX="355.0" layoutY="76.0" text="Tampilan Laporan" textFill="#f5efef">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tabel" layoutX="37.0" layoutY="164.0" prefHeight="498.0" prefWidth="952.0">
+         <columns>
+            <TableColumn fx:id="colno" prefWidth="47.999969482421875" text="No." />
+            <TableColumn fx:id="colnotkt" prefWidth="182.0" text="No.Tiket" />
+            <TableColumn fx:id="coljmmsk" prefWidth="206.0" text="Jam Masuk" />
+            <TableColumn fx:id="coljmklr" minWidth="1.0" prefWidth="193.0" text="Jam Keluar" />
+            <TableColumn fx:id="colidptgs" minWidth="2.0" prefWidth="177.0" text="ID Petugas" />
+            <TableColumn fx:id="colharga" minWidth="0.0" prefWidth="145.0" text="Harga" />
+         </columns>
+      </TableView>
+      <Label layoutX="764.0" layoutY="109.0" text="Ambil Data dengan :" textFill="#fff8f8" />
+      <ComboBox fx:id="ambildata" layoutX="879.0" layoutY="105.0" prefWidth="150.0" promptText="=======Data=======" />
+      <Button fx:id="btncetak" layoutX="461.0" layoutY="674.0" mnemonicParsing="false" onAction="#cetakk" text="Cetak">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Label fx:id="query" layoutX="23.0" layoutY="58.0" text="Label" visible="false" />
+      <TextField fx:id="waktu" layoutX="14.0" layoutY="41.0" visible="false" />
+   </children>
+</AnchorPane>

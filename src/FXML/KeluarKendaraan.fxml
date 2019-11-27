@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="745.0" prefWidth="1052.0" styleClass="tampilanutama" stylesheets="@../Style/DaftarPetugas.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.KeluarKendaraanController">
+   <children>
+      <TableView fx:id="tabel" layoutX="40.0" layoutY="14.0" onMouseClicked="#ambildata" prefHeight="498.0" prefWidth="952.0">
+        <columns>
+          <TableColumn fx:id="colno" prefWidth="47.999969482421875" text="No." />
+          <TableColumn fx:id="colnotkt" prefWidth="182.0" text="No.Tiket" />
+            <TableColumn fx:id="coljmmsk" prefWidth="206.0" text="Jam Masuk" />
+            <TableColumn fx:id="coljmklr" minWidth="1.0" prefWidth="193.0" text="Jam Keluar" />
+            <TableColumn fx:id="colidptgs" minWidth="2.0" prefWidth="177.0" text="ID Pegawai" />
+            <TableColumn fx:id="colharga" minWidth="0.0" prefWidth="145.0" text="Harga" />
+        </columns>
+      </TableView>
+      <TextField fx:id="notkt" layoutX="139.0" layoutY="539.0" onAction="#aksitiket" onKeyReleased="#rilistiket" prefHeight="77.0" prefWidth="329.0" promptText="No.Tiket">
+         <font>
+            <Font size="36.0" />
+         </font></TextField>
+      <TextField fx:id="harga" editable="false" layoutX="630.0" layoutY="639.0" prefHeight="77.0" prefWidth="362.0" promptText="Harga">
+         <font>
+            <Font size="36.0" />
+         </font></TextField>
+      <TextField fx:id="jmklr" editable="false" layoutX="630.0" layoutY="531.0" prefHeight="77.0" prefWidth="362.0" promptText="Jam Keluar">
+         <font>
+            <Font size="36.0" />
+         </font></TextField>
+      <TextField fx:id="jmmsk" editable="false" layoutX="139.0" layoutY="639.0" prefHeight="77.0" prefWidth="329.0" promptText="Jam Masuk">
+         <font>
+            <Font size="36.0" />
+         </font></TextField>
+      <Label layoutX="26.0" layoutY="563.0" text="No Tiket" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="526.0" layoutY="670.0" text="Harga" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="526.0" layoutY="555.0" text="Jam Keluar" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="655.0" text="Jam Masuk" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

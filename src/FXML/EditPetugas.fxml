@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="745.0" prefWidth="1052.0" styleClass="tampilanutama" stylesheets="@../Style/DaftarPetugas.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.EditPetugasController">
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="1112.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Petugas">
+               <items>
+                  <MenuItem fx:id="tambahptgs" mnemonicParsing="false" onAction="#kliktmbh" text="Tambah" />
+                  <MenuItem fx:id="ubhptgs" mnemonicParsing="false" onAction="#klikubah" text="Ubah" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Data">
+               <items>
+                  <MenuItem fx:id="editdata" mnemonicParsing="false" onAction="#klikedit" text="Edit" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Laporan">
+               <items>
+                  <MenuItem fx:id="cetak" mnemonicParsing="false" onAction="#klikcetak" text="Lihat danCetak Laporan" />
+               </items>
+            </Menu>
+            <Menu fx:id="keluar" mnemonicParsing="false" text="Keluar">
+               <items>
+                  <MenuItem fx:id="exit" mnemonicParsing="false" onAction="#klikkluar" text="Keluar Aplikasi" />
+                  <MenuItem fx:id="logout" mnemonicParsing="false" onAction="#kliklogout" text="Logout" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <TableView fx:id="tabel" editable="true" layoutX="14.0" layoutY="34.0" onMouseClicked="#ambildata" prefHeight="162.0" prefWidth="984.0">
+        <columns>
+          <TableColumn fx:id="colno" prefWidth="29.0" text="No" />
+          <TableColumn fx:id="colid" prefWidth="121.0" text="ID Petugas" />
+            <TableColumn fx:id="colnama" prefWidth="102.0" text="Nama" />
+            <TableColumn fx:id="collvl" prefWidth="97.0" text="Level" />
+            <TableColumn fx:id="colgndr" prefWidth="92.0" text="Gender" />
+            <TableColumn fx:id="colttl" prefWidth="129.0" text="Tanggal Lahir" />
+            <TableColumn fx:id="colalamat" prefWidth="153.0" text="Alamat" />
+            <TableColumn fx:id="colnohp" prefWidth="123.0" text="No HP" />
+            <TableColumn fx:id="colimel" prefWidth="137.0" text="Email" />
+        </columns>
+      </TableView>
+      <TextField fx:id="id" layoutX="75.0" layoutY="206.0" onKeyReleased="#search" prefHeight="49.0" prefWidth="228.0" promptText="ID">
+         <font>
+            <Font size="22.0" />
+         </font></TextField>
+      <TextField fx:id="nama" layoutX="390.0" layoutY="205.0" promptText="Nama">
+         <font>
+            <Font size="22.0" />
+         </font></TextField>
+      <DatePicker fx:id="ttl" layoutX="765.0" layoutY="206.0" prefHeight="49.0" prefWidth="239.0" promptText="TTL" />
+      <TextField fx:id="nohp" layoutX="67.0" layoutY="287.0" prefHeight="49.0" prefWidth="228.0" promptText="No.HP">
+         <font>
+            <Font size="22.0" />
+         </font></TextField>
+      <TextField fx:id="lvl" layoutX="390.0" layoutY="287.0" promptText="Level">
+         <font>
+            <Font size="22.0" />
+         </font></TextField>
+      <TextField fx:id="email" layoutX="765.0" layoutY="287.0" prefHeight="48.0" prefWidth="239.0" promptText="Email">
+         <font>
+            <Font size="22.0" />
+         </font></TextField>
+      <TextArea fx:id="alamat" layoutX="89.0" layoutY="430.0" prefHeight="95.0" prefWidth="323.0" promptText="Alamat">
+         <font>
+            <Font size="22.0" />
+         </font></TextArea>
+      <Button fx:id="edit" layoutX="515.0" layoutY="406.0" mnemonicParsing="false" onAction="#klikbtnedit" prefHeight="48.0" prefWidth="121.0" text="Edit Data">
+         <font>
+            <Font size="22.0" />
+         </font></Button>
+      <Button fx:id="delete" layoutX="576.0" layoutY="493.0" mnemonicParsing="false" onAction="#klikapus" text="Hapus Data">
+         <font>
+            <Font size="22.0" />
+         </font></Button>
+      <Button fx:id="refresh" layoutX="657.0" layoutY="406.0" mnemonicParsing="false" onAction="#klikbersih" text="Bersihkan">
+         <font>
+            <Font size="22.0" />
+         </font></Button>
+      <Label fx:id="tgl" layoutX="200.0" layoutY="213.0" text="Label" visible="false" />
+      <Label fx:id="idlvl" layoutX="75.0" layoutY="508.0" text="Label" visible="false" />
+      <Label layoutX="23.0" layoutY="215.0" text="ID" textFill="WHITE">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="706.0" layoutY="296.0" text="Email" textFill="WHITE">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="706.0" layoutY="215.0" text="TTL" textFill="WHITE">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="332.0" layoutY="295.0" text="Level" textFill="WHITE">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="328.0" layoutY="213.0" text="Nama" textFill="WHITE">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="11.0" layoutY="430.0" text="Alamat" textFill="WHITE">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="2.0" layoutY="296.0" text="No HP" textFill="WHITE">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

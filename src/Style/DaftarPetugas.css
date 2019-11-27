@@ -1,0 +1,4 @@
+.tampilanutama{
+    -fx-background-image: url(tampilan.png);
+    -fx-background-size: cover;
+}

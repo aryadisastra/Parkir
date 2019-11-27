@@ -1,0 +1,8 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+-fx-background-image: url('tampilan.png');
+-fx-background-size: cover;
+}

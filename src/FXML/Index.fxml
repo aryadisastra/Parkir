@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="index" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="745.0" prefWidth="1052.0" styleClass="index" stylesheets="@../Style/index.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.IndexController">
+ 
+    <children>
+      <MenuBar layoutX="1.0" layoutY="4.0" prefHeight="33.0" prefWidth="1101.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Petugas">
+               <items>
+                  <MenuItem fx:id="tambahptgs" mnemonicParsing="false" onAction="#kliktmbh" text="Tambah" />
+                  <MenuItem fx:id="ubhptgs" mnemonicParsing="false" onAction="#klikubah" text="Ubah" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Data">
+               <items>
+                  <MenuItem fx:id="editdata" mnemonicParsing="false" onAction="#klikedit" text="Edit" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Laporan">
+               <items>
+                  <MenuItem fx:id="cetak" mnemonicParsing="false" onAction="#klikcetak" text="Lihat danCetak Laporan" />
+               </items>
+            </Menu>
+            <Menu fx:id="keluar" mnemonicParsing="false" text="Keluar">
+               <items>
+                  <MenuItem fx:id="exit" mnemonicParsing="false" onAction="#klikkluar" text="Keluar Aplikasi" />
+                  <MenuItem fx:id="logout" mnemonicParsing="false" onAction="#kliklogout" text="Logout" />
+               </items></Menu>
+         </menus>
+      </MenuBar>
+       
+      <TableView fx:id="tabel" editable="true" layoutX="21.0" layoutY="213.0" onMouseClicked="#ambildata" prefHeight="162.0" prefWidth="826.0">
+         <columns>
+            <TableColumn fx:id="colno" prefWidth="29.0" text="No" />
+            <TableColumn fx:id="colid" prefWidth="86.0" text="ID Petugas" />
+            <TableColumn fx:id="colnama" prefWidth="94.0" text="Nama" />
+            <TableColumn fx:id="collvl" prefWidth="98.0" text="Level" />
+            <TableColumn fx:id="colgndr" prefWidth="74.0" text="Gender" />
+            <TableColumn fx:id="colttl" prefWidth="127.0" text="Tanggal Lahir" />
+            <TableColumn fx:id="colalamat" prefWidth="103.0" text="Alamat" />
+            <TableColumn fx:id="colnohp" prefWidth="87.0" text="No HP" />
+            <TableColumn fx:id="colimel" prefWidth="127.0" text="Email" />
+         </columns>
+      </TableView>
+      <Label layoutX="396.0" layoutY="48.0" text="Selamat Datang" textFill="#fcf8f8">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="namapetugas" alignment="CENTER" layoutX="396.0" layoutY="101.0" text="Petugas" textAlignment="CENTER" textFill="#fcf8f8">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="160.0" text="Tabel Petugas" textFill="#f8f4f4">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Separator layoutX="-2.0" layoutY="151.0" prefHeight="19.0" prefWidth="1059.0" />
+      <Label layoutX="21.0" layoutY="387.0" text="Tabel Kendaraan Masuk" textFill="#fffdfd">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tabelkend" layoutX="21.0" layoutY="440.0" prefHeight="199.0" prefWidth="826.0">
+         <columns>
+            <TableColumn fx:id="colnok" prefWidth="47.999969482421875" text="No." />
+            <TableColumn fx:id="colnotkt" prefWidth="122.0" text="No.Tiket" />
+            <TableColumn fx:id="coljmmsk" prefWidth="164.0" text="Jam Masuk" />
+            <TableColumn fx:id="coljmklr" minWidth="1.0" prefWidth="165.0" text="Jam Keluar" />
+            <TableColumn fx:id="colidptgs" minWidth="2.0" prefWidth="177.0" text="ID Pegawai" />
+            <TableColumn fx:id="colharga" minWidth="0.0" prefWidth="149.0" text="Harga" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

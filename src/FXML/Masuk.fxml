@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="745.0" prefWidth="1052.0" styleClass="mainFxmlClass" stylesheets="@../Style/masuk.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MasukController">
+   <children>
+      <ImageView id="btnmasuk" fx:id="btnmasuk" accessibleRole="BUTTON" accessibleText="F1" cache="true" fitHeight="235.0" fitWidth="267.0" layoutX="37.0" layoutY="424.0" onMouseClicked="#masuk" pickOnBounds="true" preserveRatio="true" styleClass="btnmasuk">
+         <image>
+            <Image url="@../Style/mask.png" />
+         </image>
+      </ImageView>
+      <ImageView id="btnbantu" fx:id="btnbantu" accessibleRole="BUTTON" fitHeight="227.0" fitWidth="235.0" layoutX="414.0" layoutY="428.0" onMouseClicked="#bantuanklik" pickOnBounds="true" preserveRatio="true" styleClass="btnbantu">
+         <image>
+            <Image url="@../Style/bntu.png" />
+         </image>
+      </ImageView>
+      <ImageView id="btnerror" fx:id="btnerror" accessibleRole="BUTTON" fitHeight="235.0" fitWidth="227.0" layoutX="763.0" layoutY="436.0" onMouseClicked="#daruratklik" pickOnBounds="true" preserveRatio="true" styleClass="btnerror">
+         <image>
+            <Image url="@../Style/err.png" />
+         </image>
+      </ImageView>
+      <PasswordField fx:id="idmsk" layoutX="249.0" layoutY="120.0" onAction="#masukpetugas" onKeyPressed="#gabisaketik" onKeyReleased="#masukid" opacity="0.85" prefHeight="25.0" prefWidth="555.0" promptText="ID">
+         <font>
+            <Font size="36.0" />
+         </font></PasswordField>
+      <Label layoutX="345.0" layoutY="47.0" text="Scan Kartu Anda" textFill="WHITE">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
+      <Label layoutX="60.0" layoutY="515.0" prefHeight="53.0" prefWidth="190.0" text="Ambil Tiket">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <Label layoutX="462.0" layoutY="515.0" text="Bantuan">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <Label layoutX="790.0" layoutY="523.0" prefHeight="54.0" prefWidth="173.0" text="Tombol Darurat">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label fx:id="notifikasi" layoutX="68.0" layoutY="284.0" prefHeight="118.0" prefWidth="993.0" stylesheets="@../Style/masuk.css" textFill="#00ff48">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="bantudarurat" layoutX="3.0" layoutY="20.0" prefHeight="17.0" prefWidth="594.0" stylesheets="@../Style/masuk.css">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="kodeharga" layoutX="29.0" layoutY="701.0" text="Label" visible="false" />
+   </children>
+</AnchorPane>

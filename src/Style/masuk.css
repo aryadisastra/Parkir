@@ -1,0 +1,22 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    -fx-background-image: url(parkir.png);
+    -fx-background-size: cover;
+}
+.btnmasuk{
+    -fx-image: url(mask.png);
+    -fx-border-radius: 50% ;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -fx-background-color: red;
+}
+.btnerror{
+    -fx-image: url('err.png');
+}
+.btnbantu{
+    -fx-image: url('bntu.png');
+}
+
